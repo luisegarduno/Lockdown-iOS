@@ -16,13 +16,52 @@ Pull requests are welcome - please document any changes and potential bugs.
 
 ### Build Instructions
 
-1. `pod install`
+1. `pod install`***
 
 2. `carthage update --no-use-binaries --platform iOS` or for XCode 12 `./wcarthage update --no-use-binaries --platform iOS` (workaround for [this Carthage issue](https://github.com/Carthage/Carthage/issues/3019)) 
 
 3. Open `LockdowniOS.xcworkspace`
 
 To sign the app for devices, you will need an Apple Developer account.
+
+-------------------
+
+***Note***: When running `pod install` if you receive a error relating to `cocoapods-acknowledgements`, try the following:
+
+1. Install rbenv
+```zsh
+brew install rbenv
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+2. Install & set ruby version == 2.7.3
+```zsh
+rbenv install 2.7.3
+
+# Make sure you are in the correct directory!!
+cd Lockdown-iOS/
+
+rbenv local 2.7.3 
+```
+
+3. Restart terminal & verify ruby version
+```zsh
+# This should output 2.7.3
+ruby -v
+```
+
+4. Install `cocoapods` and `cocoapods-acknowledgements`; *not* with *sudo* or *homebrew*.
+```zsh
+gem install cocoapods cocoapods-acknowledgements
+```
+
+5. Restart terminal & try installing again:
+```zsh
+pod install
+```
+
+-------------------
 
 ### Limitations to Building Locally
 
