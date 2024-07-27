@@ -26,7 +26,7 @@ To sign the app for devices, you will need an Apple Developer account.
 
 -------------------
 
-***Note***: When running `pod install` if you receive a error relating to `cocoapods-acknowledgements`, try the following:
+***Note (1)***: When running `pod install` if you receive a error relating to `cocoapods-acknowledgements`, try the following:
 
 1. Install rbenv
 ```zsh
@@ -59,6 +59,13 @@ gem install cocoapods cocoapods-acknowledgements
 5. Restart terminal & try installing again:
 ```zsh
 pod install
+```
+
+***Note (2)***: When running the `carthage` command, and you recieve a *Task failed with exit code 65* (or a different error), try using the carthage.sh script I've included.
+
+1. Run script
+```zsh
+sh carthage.sh update --no-use-binaries --platform iOS
 ```
 
 -------------------
