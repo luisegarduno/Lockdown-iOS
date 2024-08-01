@@ -20,7 +20,10 @@ Pull requests are welcome - please document any changes and potential bugs.
 
 2. `carthage update --no-use-binaries --platform iOS` or for XCode 12 `./wcarthage update --no-use-binaries --platform iOS` (workaround for [this Carthage issue](https://github.com/Carthage/Carthage/issues/3019)) 
 
-3. Open `LockdowniOS.xcworkspace`
+3. Open `LockdowniOS.xcworkspace` via XCode
+
+4. 'NEKit' is in the wrong location: On the left side-panel, click on 'NEKit' (should be marked red). Then on the right side-panel, change the location to: `Lockdown-iOS/Carthage/Checkouts/NEKit/NEKit.xcodeproj`
+
 
 To sign the app for devices, you will need an Apple Developer account.
 
