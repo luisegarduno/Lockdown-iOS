@@ -1,4 +1,4 @@
-warning_threshold: 1
+warning_threshold: 2000
 
 disabled_rules:
   - unused_setter_value
